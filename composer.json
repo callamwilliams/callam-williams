@@ -1,0 +1,42 @@
+{
+  "prefer-stable": true,
+  "config": {
+    "secure-http": false
+  },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "advanced-custom-fields/advanced-custom-fields-pro",
+                "version": "5.5.14",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9NDQ3OTl8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTExLTIxIDA5OjM3OjEw"
+                }
+            }
+        },
+        {
+            "type":"composer",
+            "url":"http://wpackagist.org"
+        }
+    ],
+    "require": {
+        "composer/installers": ">=1.0",
+        "fancyguy/webroot-installer": "1.0.0",
+        "johnpbloch/wordpress": ">=4.6",
+        "advanced-custom-fields/advanced-custom-fields-pro": ">=5.5.14",
+        "wpackagist-plugin/acf-content-analysis-for-yoast-seo": ">=1.2.5",
+        "wpackagist-plugin/wordpress-seo": ">=3.1.1",
+        "wpackagist-plugin/regenerate-thumbnails": ">=2.2.6",
+        "wpackagist-plugin/wp-bcrypt": ">=1.0.1"
+    },
+    "extra": {
+        "wordpress-install-dir": "httpdocs/wordpress",
+        "webroot-package": "wordpress",
+        "installer-paths": {
+            "httpdocs/vie-verbier/plugins/{$name}/": ["type:wordpress-plugin"],
+            "httpdocs/vie-verbier/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    }
+}

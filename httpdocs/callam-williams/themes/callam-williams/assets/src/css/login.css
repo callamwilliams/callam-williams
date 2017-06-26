@@ -1,0 +1,6 @@
+body.login div#login h1 a {
+	background-image: url("../../src/img/hallandwoodhouse-logo.png");
+	background-size: contain;
+	background-position: center center;
+	width: 100%;
+}

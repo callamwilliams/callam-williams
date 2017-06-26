@@ -1,0 +1,21 @@
+{
+	"plugins": [
+		"transform-flow-strip-types"
+	],
+	"presets": [
+		[
+			"env",
+			{
+				"targets": {
+					"browsers": [
+						"ie >= 10",
+						"Safari >= 9"
+					]
+				},
+				"modules": false,
+				"loose": true
+				/*,"debug": true*/
+			}
+		]
+	]
+}

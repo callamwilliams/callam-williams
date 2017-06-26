@@ -1,0 +1,229 @@
+// Box Model
+
+$box-model-property-map: (m: (margin), mt: (margin-top), mr: (margin-right), mb: (margin-bottom), ml: (margin-left), p: (padding), pt: (padding-top), pr: (padding-right), pb: (padding-bottom), pl: (padding-left));
+
+$sizes-list: 0 5 10 15 20 25 30 35 40 45 50;
+
+@each $size in $sizes-list {
+
+	@each $keyword, $property in $box-model-property-map {
+
+		.#{$keyword}#{$size} {
+
+			@each $style in $property {
+
+				#{$style}: $size + px;
+
+			}
+
+		}
+
+	}
+
+}
+
+// Clearfix
+
+.clearfix {
+	@include clearfix;
+}
+
+.w100 {
+	width: 100%;
+}
+
+// Display
+
+.d {
+
+	&-block {
+		display: block;
+	}
+
+	&-inline-block {
+		display: inline-block;
+	}
+
+	&-none {
+		display: none;
+	}
+
+	&-table {
+		display: table;
+	}
+
+}
+
+// Floats
+
+.fl,
+%fl {
+	display: inline;
+	float: left;
+}
+
+.fr,
+%fr {
+	display: inline;
+	float: right;
+}
+
+.clear {
+
+	&--l {
+		clear: left;
+	}
+
+	&--r {
+		clear: right;
+	}
+
+	&--b {
+		clear: both;
+	}
+
+	&--none {
+		clear: none;
+	}
+
+}
+
+// Icons
+
+[class^='icon-'],
+[class*=' icon-'] {
+
+	&.icon--reset {
+
+		&:before {
+			display: block;
+			line-height: 50%;
+		}
+	}
+
+	&.icon--baseline {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&.icon--block {
+		display: block;
+	}
+}
+
+// Positioning
+
+.pos {
+
+	&--r {
+		position: relative;
+	}
+
+	&--a {
+		position: absolute;
+	}
+
+	&--f {
+		position: fixed;
+	}
+}
+
+// Text
+.text {
+
+	&--strong {
+		font-weight: bold;
+	}
+
+	&--normal {
+		font-weight: normal;
+	}
+
+	&--italic {
+		font-style: italic;
+	}
+
+	&--upper {
+		text-transform: uppercase;
+	}
+
+	&--lower {
+		text-transform: lowercase;
+	}
+
+	&--reset {
+		text-decoration: none;
+		text-transform: none;
+	}
+
+	&--right {
+		text-align: right;
+	}
+
+	&--left {
+		text-align: left;
+	}
+
+	&--center {
+		text-align: center;
+	}
+
+	&--justify {
+		text-align: justify;
+	}
+
+	&--underline {
+		text-decoration: underline;
+	}
+
+	&--weighted {
+		display: block;
+	}
+}
+
+//overflow
+.overflow {
+
+	&--hidden {
+		overflow: hidden;
+	}
+
+	&--visible {
+		overflow: visible;
+	}
+
+	&--auto {
+		overflow: auto;
+	}
+
+	&--scroll {
+		overflow: scroll;
+	}
+}
+
+.vertical-align {
+
+	@include vertical-align;
+
+	&--abs {
+		@include vertical-align(absolute);
+	}
+}
+
+.small-hide {
+	@include mq($small) {
+		display: none;
+	}
+}
+
+.medium-hide {
+	@include mq($medium) {
+		display: none;
+	}
+}
+
+.large-hide {
+	@include mq($large) {
+		display: none;
+	}
+}

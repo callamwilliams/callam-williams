@@ -1,0 +1,12 @@
+# Wordpress Specific Ignores
+
+/vendor
+/httpdocs/wordpress/
+/httpdocs/callam-williams/uploads/
+/httpdocs/callam-williams/plugins/
+httpdocs/callam-williams/languages/
+/node_modules/
+/bower_components/
+
+/httpdocs/callam-williams/themes/callam-williams/assets/src/sass/lib/
+
