@@ -40,6 +40,15 @@ module.exports = {
                 }]
             }),
         }, {
+            enforce: "pre",
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: "eslint-loader",
+            options: {
+                fix: true,
+                formatter: require("eslint-friendly-formatter")
+            }
+        }, {
             test: /\.js$/,
             use: [{
                 loader: 'babel-loader',
