@@ -35,8 +35,8 @@
         "wordpress-install-dir": "httpdocs/wordpress",
         "webroot-package": "wordpress",
         "installer-paths": {
-            "httpdocs/vie-verbier/plugins/{$name}/": ["type:wordpress-plugin"],
-            "httpdocs/vie-verbier/themes/{$name}/": ["type:wordpress-theme"]
+            "httpdocs/callam-williams/plugins/{$name}/": ["type:wordpress-plugin"],
+            "httpdocs/callam-williams/themes/{$name}/": ["type:wordpress-theme"]
         }
     }
 }
