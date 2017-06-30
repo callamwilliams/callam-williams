@@ -49,12 +49,12 @@ Thumbs.db
 
 /vendor
 /httpdocs/wordpress/
-/httpdocs/vie-verbier/uploads/
-/httpdocs/vie-verbier/plugins/
-httpdocs/vie-verbier/languages/
+/httpdocs/callam-williams/uploads/
+/httpdocs/callam-williams/plugins/
+httpdocs/callam-williams/languages/
 
 # Theme Ignores
 
-/httpdocs/vie-verbier/themes/vie-verbier/assets/css/maps/main.css.map
-/httpdocs/vie-verbier/themes/vie-verbier/assets/js/maps/main.min.js.map
+/httpdocs/callam-williams/themes/callam-williams/assets/css/maps/main.css.map
+/httpdocs/callam-williams/themes/callam-williams/assets/js/maps/main.min.js.map
 /node_modules/
