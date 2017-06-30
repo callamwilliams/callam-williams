@@ -1,12 +1,12 @@
 {
-	"name": "vie-verbier",
+	"name": "callam-williams",
 	"version": "1.0.0",
-	"description": "vie-verbier",
+	"description": "callam-williams",
 	"main": "index.js",
 	"scripts": {
 		"dev": "NODE_ENV=development webpack -d --progress --watch --color",
 		"prod": "NODE_ENV=production webpack -p",
-		"lint": "stylelint 'httpdocs/vie-verbier/themes/vie-verbier/assets/src/sass/**/*.scss'"
+		"lint": "stylelint 'httpdocs/callam-williams/themes/callam-williams/assets/src/sass/**/*.scss'"
 	},
 	"pre-commit": [
 		"lint"
