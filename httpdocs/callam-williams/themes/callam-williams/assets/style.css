@@ -279,6 +279,20 @@ img, embed, object, audio, video {
   color: #000;
   text-shadow: none; }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.eot");
+  src: url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.woff") format("woff"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.ttf") format("truetype"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.svg#f4ba68a9596ca53347cecdb9c6e48d01") format("svg");
+  font-style: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.eot");
+  src: url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.woff") format("woff"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.ttf") format("truetype"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.svg#b49e654214c0ade376e714f6d9c78d72") format("svg");
+  font-style: normal;
+  font-weight: 700; }
+
 html {
   width: 100%;
   height: 100%;
@@ -349,11 +363,11 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center; }
 
 ::-moz-selection {
-  background-color: #494949;
+  background-color: #544D6B;
   color: #ffffff; }
 
 ::selection {
-  background-color: #494949;
+  background-color: #544D6B;
   color: #ffffff; }
 
 /**
@@ -1149,12 +1163,12 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center; }
 
 .lazyload::before {
-  background-color: #494949;
+  background-color: #544D6B;
   transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   opacity: 1; }
 
 .lazyloaded::before {
-  background-color: #494949;
+  background-color: #544D6B;
   opacity: 0; }
 
 .seo {
