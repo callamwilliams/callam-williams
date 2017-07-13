@@ -71,6 +71,4 @@
 	</nav>
 </header>
 
-<section id="js-wrapper">
-	<div class="js-container main">
-		<main id="main" class="<?= ! is_front_page() ? 'main--away' : null; ?>">
+<main id="main" class="<?= ! is_front_page() ? 'main--away' : null; ?>">

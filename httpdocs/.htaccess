@@ -1,3 +1,6 @@
+
+
+
 ## DISABLE ETAGS ##
 <ifModule mod_headers.c>
     Header unset ETag
@@ -7,7 +10,6 @@ FileETag None
 
 ## EXPIRES CACHING ##
 <ifModule mod_expires.c>
-
     ExpiresActive on
 
     # CSS
@@ -42,26 +44,4 @@ FileETag None
 
 </ifModule>
 
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
 
-RewriteCond %{ENV:SITE_HOST}@%{HTTP_HOST} !^(.*)@\1$
-RewriteRule ^(.*)$ http://%{ENV:SITE_HOST}/$1 [R=301,L]
-
-RewriteRule ^$ wordpress/index.php [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /wordpress/index.php [L]
-</IfModule>
-# BEGIN WordPress
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
-</IfModule>
-
-# END WordPress

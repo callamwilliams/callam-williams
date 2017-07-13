@@ -9,15 +9,32 @@ add_theme_support( 'automatic-feed-links' );
  */
 
 function image_sizes() {
-	add_image_size( 'banner', 1700 );
+	add_image_size( 'banner', 1800 );
 	add_image_size( 'background', 1540 );
-	add_image_size( 'half', 760, 520);
-	add_image_size( 'triple', 500, 555);
-	add_image_size( 'card', 640, 430);
-	add_image_size( 'card_row', 450, 800);
-	add_image_size( 'logo', 490, 490 );
+	add_image_size( 'half', 760, 520 );
+	add_image_size( 'triple', 500, 555 );
+	add_image_size( 'card', 640, 430 );
 
 }
 
 add_action( 'after_setup_theme', 'image_sizes' );
+
+
+/**
+ * @desc Disable annoying responsive post images
+ */
+
+add_filter( 'xmlrpc_enabled', '__return_false' );
+remove_action( 'wp_head', 'rsd_link' );
+remove_action( 'wp_head', 'wlwmanifest_link' );
+
+add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
+add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
+function remove_thumbnail_dimensions( $html ) {
+	$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+
+	return $html;
+}
 

@@ -15,20 +15,20 @@ function create_prop_post_types() {
 
 			//  What will the CPT be known as?  //
 			'labels'                => array(
-				'name'               => _x( 'Menus', 'burke-clemens' ),
-				'singular_name'      => _x( 'Menus', 'burke-clemens' ),
-				'menu_name'          => _x( 'Menus', 'burke-clemens' ),
-				'name_admin_bar'     => _x( 'Menus', 'burke-clemens' ),
-				'add_new'            => _x( 'Add New', 'burke-clemens' ),
-				'add_new_item'       => __( 'Add New Menu', 'burke-clemens' ),
-				'new_item'           => __( 'New Menu', 'burke-clemens' ),
-				'edit_item'          => __( 'Edit Menu', 'burke-clemens' ),
-				'view_item'          => __( 'View Menu', 'burke-clemens' ),
-				'all_items'          => __( 'All Menus', 'burke-clemens' ),
-				'search_items'       => __( 'Search Menus', 'burke-clemens' ),
-				'parent_item_colon'  => __( 'Parent Menu:', 'burke-clemens' ),
-				'not_found'          => __( 'No Menus found.', 'burke-clemens' ),
-				'not_found_in_trash' => __( 'No Menus found in Trash.', 'burke-clemens' )
+				'name'               => _x( 'Menus', 'propeller' ),
+				'singular_name'      => _x( 'Menus', 'propeller' ),
+				'menu_name'          => _x( 'Menus', 'propeller' ),
+				'name_admin_bar'     => _x( 'Menus', 'propeller' ),
+				'add_new'            => _x( 'Add New', 'propeller' ),
+				'add_new_item'       => __( 'Add New Menu', 'propeller' ),
+				'new_item'           => __( 'New Menu', 'propeller' ),
+				'edit_item'          => __( 'Edit Menu', 'propeller' ),
+				'view_item'          => __( 'View Menu', 'propeller' ),
+				'all_items'          => __( 'All Menus', 'propeller' ),
+				'search_items'       => __( 'Search Menus', 'propeller' ),
+				'parent_item_colon'  => __( 'Parent Menu:', 'propeller' ),
+				'not_found'          => __( 'No Menus found.', 'propeller' ),
+				'not_found_in_trash' => __( 'No Menus found in Trash.', 'propeller' )
 			),
 
 			//  Settings - how will the CPT behave?  //
@@ -44,12 +44,6 @@ function create_prop_post_types() {
 			'show_in_rest'          => true,
 			'rest_controller_class' => 'WP_REST_Posts_Controller',
 			'show_in_nav_menus'     => true,
-
-			//  What editable fields will the CPT support?  //
-			'supports'              => array(
-				'title',
-				'editor',
-			),
 
 			//  Which Taxonomies will be applicable?  //
 			'taxonomies'            => array(

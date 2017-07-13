@@ -11,26 +11,17 @@ function create_prop_taxonomies() {
 
 
 	register_taxonomy(
-		'Services', //  Your taxonomy title  //
-		'services',   //  The Custom Post Type it will belong to  //
+		'Menus', //  Your taxonomy title  //
+		'menus',   //  The Custom Post Type it will belong to  //
 		array(
 			'hierarchical' => true,
-			'label'        => 'Services',
+			'label'        => 'All Menus',
 			'query_var'    => true,
-			'rewrite'      => array( 'slug' => 'services' )
+			'rewrite'      => array( 'slug' => 'all-menus' )
 		)
 	);
-	register_taxonomy(
-		'Clients', //  Your taxonomy title  //
-		'clients',   //  The Custom Post Type it will belong to  //
-		array(
-			'hierarchical' => true,
-			'label'        => 'Clients',
-			'query_var'    => true,
-			'rewrite'      => array( 'slug' => 'clients' )
-		)
-	);
-//  Add the next taxonomy here  //
+
+	//  Add the next taxonomy here  //
 
 	flush_rewrite_rules();
 }

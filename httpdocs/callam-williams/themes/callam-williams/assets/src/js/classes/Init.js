@@ -5,13 +5,13 @@ class Init {
 		this.functions = functions;
 		this.events = {};
 
-		console.log(document.readyState);
-		if (document.readyState === 'complete' || document.readyState === 'interactive') {
+		if (document.readyState !== 'loading' && document.body) {
 			this.init();
+		} else if (document.readyState === 'loading') {
+			document.addEventListener('readystatechange', this.readyHandler.bind(this), false);
 		} else {
-			document.addEventListener('readystatechange', this.init.bind(this), false);
+			document.addEventListener('DOMContentLoaded', this.init.bind(this));
 		}
-		return this.core;
 	}
 
 	static tidy(operation, task) {
@@ -25,6 +25,9 @@ class Init {
 	}
 
 	static presentError(operation, error) {
+		if (typeof console === 'undefined') {
+			return;
+		}
 		if (console.groupCollapsed) {
 			console.groupCollapsed(`%c [${operation} error] - ${error.message}. Expand for details:`, 'color: #ff5a5a');
 			console.log(error.stack);
@@ -34,11 +37,14 @@ class Init {
 		}
 	}
 
-	init() {
+	readyHandler() {
 		if (document.readyState !== 'interactive') {
 			return;
 		}
+		this.init();
+	}
 
+	init() {
 		const operations = Object.keys(this.functions);
 
 		for (let i = 0, l = operations.length; i < l; i++) {
@@ -47,6 +53,8 @@ class Init {
 			this.events[clean] = Init.tidy(operation);
 			this.bindEvents(this.events[clean], operation);
 		}
+
+		window.propCore = this.core;
 	}
 
 	bindEvents(events, operation) {

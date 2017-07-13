@@ -24,6 +24,7 @@
 		"babel-preset-stage-0": "^6.22.0",
 		"barba.js": "^1.0.0",
 		"browser-sync": "^2.18.8",
+		"clean-webpack-plugin": "^0.1.16",
 		"copy-webpack-plugin": "^4.0.1",
 		"core-js": "^2.4.1",
 		"css-loader": "^0.26.1",

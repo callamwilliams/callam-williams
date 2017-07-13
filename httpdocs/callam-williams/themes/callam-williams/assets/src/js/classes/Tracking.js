@@ -9,7 +9,8 @@ class Tracking {
 		const selectors = document.querySelectorAll('[data-ga-category]');
 
 		selectors.forEach((selector) => {
-			selector.addEventListener('click', function () {
+			selector.addEventListener('click', () => {
+			    console.log(this);
 				const action = this.getAttribute('data-ga-action') ? this.getAttribute('data-ga-action') : 'click',
 					category = this.getAttribute('data-ga-category'),
 					label = this.getAttribute('data-ga-label') ? this.getAttribute('data-ga-label') : this.innerHTML.trim(),

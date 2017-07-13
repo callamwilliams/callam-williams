@@ -12,8 +12,7 @@ function register_prop_menus() {
 
 		array(
 
-			'left-navigation'  => __( 'Left Navigation' ),
-			'right-navigation' => __( 'Right Navigation' )
+			'primary-navigation'  => __( 'Primary Navigation' )
 		)
 
 	);

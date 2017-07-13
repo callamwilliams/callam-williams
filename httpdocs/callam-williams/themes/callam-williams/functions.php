@@ -23,12 +23,12 @@ include 'functions/setup/robots.php';
 /**
  * @desc Clean up WordPress extras
  */
-include 'functions/setup/restrict.php';
+include 'functions/setup/restrictions.php';
 
 /**
  * @desc Setup formatting for posts
  */
-include 'functions/setup/formatting.php';
+include 'functions/setup/utils.php';
 
 /**
  * @desc Setup image sizes
@@ -38,7 +38,7 @@ include 'functions/setup/images.php';
 /**
  * @desc Setup custom posts
  */
-include 'functions/setup/posts.php';
+include 'functions/setup/settings.php';
 
 /**
  * @desc Setup menus
