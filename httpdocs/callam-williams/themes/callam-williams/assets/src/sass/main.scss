@@ -1,9 +1,9 @@
-@import 'lib/reset';
 @import 'base/mixins';
 @import 'base/variables';
 @import 'base/fonts';
-@import 'base/base';
+@import 'lib/reset';
 @import 'lib/foundation-grid/main';
+@import 'base/base';
 @import 'components/title';
 @import 'components/text';
 @import 'layout/layout';

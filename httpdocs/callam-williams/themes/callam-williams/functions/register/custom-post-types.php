@@ -9,45 +9,45 @@
 
 function create_prop_post_types() {
 
-	register_post_type( 'menu',
+	register_post_type( 'project',
 
 		array(
 
 			//  What will the CPT be known as?  //
 			'labels'                => array(
-				'name'               => _x( 'Menus', 'propeller' ),
-				'singular_name'      => _x( 'Menus', 'propeller' ),
-				'menu_name'          => _x( 'Menus', 'propeller' ),
-				'name_admin_bar'     => _x( 'Menus', 'propeller' ),
-				'add_new'            => _x( 'Add New', 'propeller' ),
-				'add_new_item'       => __( 'Add New Menu', 'propeller' ),
-				'new_item'           => __( 'New Menu', 'propeller' ),
-				'edit_item'          => __( 'Edit Menu', 'propeller' ),
-				'view_item'          => __( 'View Menu', 'propeller' ),
-				'all_items'          => __( 'All Menus', 'propeller' ),
-				'search_items'       => __( 'Search Menus', 'propeller' ),
-				'parent_item_colon'  => __( 'Parent Menu:', 'propeller' ),
-				'not_found'          => __( 'No Menus found.', 'propeller' ),
-				'not_found_in_trash' => __( 'No Menus found in Trash.', 'propeller' )
+				'name'               => _x( 'Projects', 'callam-williams' ),
+				'singular_name'      => _x( 'Projects', 'callam-williams' ),
+				'project_name'          => _x( 'Projects', 'callam-williams' ),
+				'name_admin_bar'     => _x( 'Projects', 'callam-williams' ),
+				'add_new'            => _x( 'Add New', 'callam-williams' ),
+				'add_new_item'       => __( 'Add New Project', 'callam-williams' ),
+				'new_item'           => __( 'New Project', 'callam-williams' ),
+				'edit_item'          => __( 'Edit Project', 'callam-williams' ),
+				'view_item'          => __( 'View Project', 'callam-williams' ),
+				'all_items'          => __( 'All Projects', 'callam-williams' ),
+				'search_items'       => __( 'Search Projects', 'callam-williams' ),
+				'parent_item_colon'  => __( 'Parent Project:', 'callam-williams' ),
+				'not_found'          => __( 'No Projects found.', 'callam-williams' ),
+				'not_found_in_trash' => __( 'No Projects found in Trash.', 'callam-williams' )
 			),
 
 			//  Settings - how will the CPT behave?  //
 			'public'                => true,
 			'show_ui'               => true,
 			'publicly_queryable'    => true,
-			'rewrite'               => array( 'slug' => 'menu' ),
+			'rewrite'               => array( 'slug' => 'project' ),
 			'exclude_from_search'   => true,
 			'capability_type'       => 'post',
 			'has_archive'           => false,
-			'menu_icon'             => 'dashicons-carrot',
-			'menu_position'         => 18,
+			'project_icon'             => 'dashicons-welcome-widgets-menus',
+			'project_position'         => 18,
 			'show_in_rest'          => true,
 			'rest_controller_class' => 'WP_REST_Posts_Controller',
-			'show_in_nav_menus'     => true,
+			'show_in_nav_projects'     => true,
 
 			//  Which Taxonomies will be applicable?  //
 			'taxonomies'            => array(
-				'Menus'
+				'Projects'
 			),
 
 		)

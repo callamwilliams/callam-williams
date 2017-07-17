@@ -17,13 +17,13 @@
 get_header(); ?>
 
 
-<?php if ( have_rows( 'layout' ) ) {
+<?php if ( have_rows( 'page' ) ) {
 
-	while ( have_rows( 'layout' ) ) {
+	while ( have_rows( 'page' ) ) {
 
 		the_row();
 
-		include( locate_template( '/regions/' . get_row_layout() . '.php' ) );
+		include( locate_template( '/page/' . get_row_layout() . '.php' ) );
 
 	}
 

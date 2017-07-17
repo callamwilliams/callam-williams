@@ -11,13 +11,13 @@ function create_prop_taxonomies() {
 
 
 	register_taxonomy(
-		'Menus', //  Your taxonomy title  //
-		'menus',   //  The Custom Post Type it will belong to  //
+		'Projects', //  Your taxonomy title  //
+		'projects',   //  The Custom Post Type it will belong to  //
 		array(
 			'hierarchical' => true,
-			'label'        => 'All Menus',
+			'label'        => 'All Projects',
 			'query_var'    => true,
-			'rewrite'      => array( 'slug' => 'all-menus' )
+			'rewrite'      => array( 'slug' => 'all-projects' )
 		)
 	);
 

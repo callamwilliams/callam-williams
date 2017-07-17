@@ -59,12 +59,6 @@ include 'functions/setup/acf.php';
 include 'functions/admin/login.php';
 
 /**
- * @desc Adds the prop manager plugin which has custom settings
- */
-
-include 'functions/admin/prop-manager.php';
-
-/**
  * @desc Adding registering of custom post types
  */
 
@@ -82,15 +76,4 @@ include 'functions/register/custom-taxonomies.php';
 
 include 'functions/register/menus.php';
 
-/**
- * @desc Adding registering of options pages
- */
-
-include 'functions/register/options-pages.php';
-
-/**
- * @desc Adding registering of options pages
- */
-
-include 'functions/feed/instagram.php';
 

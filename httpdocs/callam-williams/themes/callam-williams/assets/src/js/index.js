@@ -1,7 +1,7 @@
 import Init from './classes/Init';
 import Tracking from './classes/Tracking';
 
-const propFuncs = {
+const pageFunctions = {
 
 	tracking__ready() {
 		Tracking.tracker();
@@ -9,5 +9,5 @@ const propFuncs = {
 
 };
 
-window.propCore = new Init(propFuncs);
+window.propCore = new Init(pageFunctions);
 

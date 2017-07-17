@@ -1,4 +1,18 @@
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);@charset "UTF-8";
+@font-face {
+  font-family: 'Roboto';
+  src: url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.eot");
+  src: url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.woff") format("woff"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.ttf") format("truetype"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.svg#f4ba68a9596ca53347cecdb9c6e48d01") format("svg");
+  font-style: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.eot");
+  src: url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.woff") format("woff"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.ttf") format("truetype"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.svg#b49e654214c0ade376e714f6d9c78d72") format("svg");
+  font-style: normal;
+  font-weight: 700; }
+
 /*!
 * ress.css • v1.2.2
 * MIT License
@@ -278,97 +292,6 @@ img, embed, object, audio, video {
   /* Required when declaring ::selection */
   color: #000;
   text-shadow: none; }
-
-@font-face {
-  font-family: 'Roboto';
-  src: url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.eot");
-  src: url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.woff") format("woff"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.ttf") format("truetype"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Regular.svg#f4ba68a9596ca53347cecdb9c6e48d01") format("svg");
-  font-style: normal;
-  font-weight: 400; }
-
-@font-face {
-  font-family: 'Roboto-Bold';
-  src: url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.eot");
-  src: url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.woff") format("woff"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.ttf") format("truetype"), url("/callam-williams/themes/callam-williams/assets/fonts/Roboto-Bold.svg#b49e654214c0ade376e714f6d9c78d72") format("svg");
-  font-style: normal;
-  font-weight: 700; }
-
-html {
-  width: 100%;
-  height: 100%;
-  margin: 0 0 1px;
-  padding: 0;
-  background: #ffffff;
-  box-sizing: border-box;
-  font-synthesis: none;
-  font-smoothing: subpixel-antialiased;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent; }
-
-body {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 30px;
-  line-height: 1.875rem;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  background-color: #ffffff;
-  color: #000000;
-  font-family: "Bariol Light", sans-serif;
-  font-weight: 200;
-  text-align: left; }
-
-* {
-  font-synthesis: inherit;
-  font-smoothing: inherit; }
-  *, *::before, *::after {
-    box-sizing: inherit; }
-
-address {
-  font-style: inherit; }
-
-figure {
-  margin: 0; }
-
-.touch {
-  cursor: pointer; }
-
-a, a:active {
-  color: inherit;
-  text-decoration: none; }
-
-p {
-  margin: 0 0 10px;
-  color: inherit;
-  font-family: "Bariol Light", sans-serif;
-  font-size: inherit;
-  font-weight: 200;
-  line-height: inherit; }
-
-ul {
-  padding: 0; }
-
-li {
-  font-family: "Bariol Light", sans-serif; }
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 10px;
-  font-family: "Bariol Light", sans-serif;
-  font-weight: 200; }
-
-.heading {
-  text-align: center; }
-
-::-moz-selection {
-  background-color: #544D6B;
-  color: #ffffff; }
-
-::selection {
-  background-color: #544D6B;
-  color: #ffffff; }
 
 /**
  * Foundation for Sites by ZURB
@@ -1144,15 +1067,92 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 0; }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 680px) {
   .medium-order-reset {
     -ms-flex-order: 0;
         order: 0; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1040px) {
   .large-order-reset {
     -ms-flex-order: 0;
         order: 0; } }
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0 0 1px;
+  padding: 0;
+  background: #ffffff;
+  box-sizing: border-box;
+  font-synthesis: none;
+  font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 30px;
+  line-height: 1.875rem;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-align: left; }
+
+* {
+  font-synthesis: inherit;
+  font-smoothing: inherit; }
+  *, *::before, *::after {
+    box-sizing: inherit; }
+
+address {
+  font-style: inherit; }
+
+figure {
+  margin: 0; }
+
+.touch {
+  cursor: pointer; }
+
+a, a:active {
+  color: inherit;
+  text-decoration: none; }
+
+p {
+  margin: 0 0 10px;
+  color: inherit;
+  font-family: "Roboto", sans-serif;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit; }
+
+ul {
+  padding: 0; }
+
+li {
+  font-family: "Roboto", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+.heading {
+  text-align: center; }
+
+::-moz-selection {
+  background-color: #544D6B;
+  color: #ffffff; }
+
+::selection {
+  background-color: #544D6B;
+  color: #ffffff; }
 
 .title {
   display: block;
@@ -1631,11 +1631,11 @@ h1, h2, h3, h4, h5, h6 {
     top: 50%;
     transform: translateY(-50%); }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 680px) {
   .small-hide {
     display: none; } }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1040px) {
   .medium-hide {
     display: none; } }
 
