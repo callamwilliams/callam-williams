@@ -26,8 +26,6 @@
         "fancyguy/webroot-installer": "1.0.0",
         "johnpbloch/wordpress": ">=4.6",
         "advanced-custom-fields/advanced-custom-fields-pro": ">=5.5.14",
-        "wpackagist-plugin/acf-content-analysis-for-yoast-seo": ">=1.2.5",
-        "wpackagist-plugin/wordpress-seo": ">=3.1.1",
         "wpackagist-plugin/regenerate-thumbnails": ">=2.2.6",
         "wpackagist-plugin/wp-bcrypt": ">=1.0.1"
     },
