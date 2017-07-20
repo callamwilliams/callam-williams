@@ -49,9 +49,10 @@ Thumbs.db
 
 /vendor
 /httpdocs/wordpress/
-/httpdocs/callam-williams/uploads/
-/httpdocs/callam-williams/plugins/
-httpdocs/callam-williams/languages/
+/httpdocs/callam-williams/uploads
+/httpdocs/callam-williams/plugins
+/httpdocs/callam-williams/languages
+
 
 # Theme Ignores
 
