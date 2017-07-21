@@ -967,7 +967,7 @@ balanced-match@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-0.1.0.tgz#b504bd05869b39259dd0c5efc35d843176dccc4a"
 
-barba.js@^1.0.0:
+barba.js:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/barba.js/-/barba.js-1.0.0.tgz#3c1d7358f0d3f87719cb1bdb775be417c9273f7d"
 
@@ -2796,16 +2796,16 @@ flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
-flickity@^2.0.5:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/flickity/-/flickity-2.0.8.tgz#7b1dd65d2844def1eae8c2849b4725a67a71fa2c"
+flickity:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/flickity/-/flickity-2.0.9.tgz#5932d33d4fe009c66621644d3f373400f90e7695"
   dependencies:
     desandro-matches-selector "^2.0.0"
     ev-emitter "^1.0.2"
     fizzy-ui-utils "^2.0.0"
     get-size "^2.0.0"
     tap-listener "^2.0.0"
-    unidragger "^2.1.0"
+    unidragger "^2.2.3"
 
 flow-bin@^0.38.0:
   version "0.38.0"
@@ -3991,7 +3991,7 @@ lazy-req@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/lazy-req/-/lazy-req-1.1.0.tgz#bdaebead30f8d824039ce0ce149d4daa07ba1fac"
 
-lazysizes@^4.0.0-rc1:
+lazysizes:
   version "4.0.0-rc3"
   resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-4.0.0-rc3.tgz#f81a0794b920d8464d415445234cfe4abcd5dbd2"
 
@@ -6997,9 +6997,9 @@ underscore@1.7.x:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.7.0.tgz#6bbaf0877500d36be34ecaa584e0db9fef035209"
 
-unidragger@^2.1.0:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/unidragger/-/unidragger-2.2.2.tgz#97159e116fdc45f14956a7e2f236b4b5e24d9e5c"
+unidragger@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/unidragger/-/unidragger-2.2.3.tgz#a618801b9b629e1045e3d3793713e7add0a1e16b"
   dependencies:
     unipointer "^2.2.0"
 
