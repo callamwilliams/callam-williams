@@ -31,7 +31,7 @@
 	<meta name="robots" content="all">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 	<meta name="url" content="<?= home_url(); ?>">
-	<meta name="theme-color" content="#fecb77">
+	<meta name="theme-color" content="#544D6B">
 	<base href="<?= home_url(); ?>">
 
 	<? $analytics = explode( "\n", 'UA-XXXXX-X' ); ?>

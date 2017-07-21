@@ -16,18 +16,17 @@
 
 get_header(); ?>
 
-<? $project_type = get_field( 'project_type' ); ?>
-<? $project_link = get_field( 'project_link' ); ?>
-<? $project_highlights = get_field( 'project_highlights' ); ?>
-<? $project_blurb = get_field('project_blurb'); ?>
-
-<?= $project_type ?>
-<?= $project_link ?>
-<?= $project_highlights ?>
-<?= $project_blurb ?>
-
 <? include( locate_template( '/project/project_banner.php' ) ); ?>
+
+<? $project_highlights = get_field( 'project_highlights' ); ?>
+<? $project_blurb = get_field( 'project_blurb' ); ?>
+
+<?= $project_blurb ?>
+<?= $project_highlights ?>
+
 <? include( locate_template( '/project/project_content.php' ) ); ?>
 <? include( locate_template( '/project/other_projects.php' ) ); ?>
 
 <?php get_footer(); ?>
+
+

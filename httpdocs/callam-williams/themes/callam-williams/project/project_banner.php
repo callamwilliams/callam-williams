@@ -1,7 +1,14 @@
 <?
+$project_image       = get_field( 'project_image' );
 $project_banner_type = get_field( 'project_banner_type' );
+$project_type        = get_field( 'project_type' );
+$project_link        = get_field( 'project_link' );
 
 ?>
+
+<?= $project_image ?>
+<?= $project_type ?>
+<?= $project_link ?>
 
 <? if ( $project_banner_type == 'Image' ):
 
@@ -36,7 +43,7 @@ $project_banner_type = get_field( 'project_banner_type' );
 
 	<?
 	$iframe   = get_field( 'project_video' );
-	$autoplay = get_sub_field( 'autoplay' );
+	$autoplay = get_sub_field( 'project_autoplayTrue' );
 	preg_match( '/src="(.+?)"/', $iframe, $matches );
 	$src = $matches[1];
 	preg_match( '/embed\/(.*)\?/', $src, $id_matches );
@@ -47,7 +54,7 @@ $project_banner_type = get_field( 'project_banner_type' );
 		<section>
 			<div class="row row--large">
 				<div class="small-12">
-					<div class="banner  <?= $banner_height ?>">
+					<div class="banner">
 						<div id="js-video" class="banner__video iframe" data-src="<?= $youtube_id ?>" data-autoplay="<?= $autoplay ?>">
 							<div class="js-img" id="player" data-player="true"></div>
 						</div>

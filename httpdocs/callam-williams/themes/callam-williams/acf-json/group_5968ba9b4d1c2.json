@@ -3,6 +3,30 @@
     "title": "Projects",
     "fields": [
         {
+            "key": "field_5971f7ee9b305",
+            "label": "Project Image",
+            "name": "project_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5968baa4d9e51",
             "label": "Project Type",
             "name": "project_type",
@@ -93,6 +117,33 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5971fa304e626",
+            "label": "Project Autoplay",
+            "name": "project_autoplay",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5968bad9d9e55",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_5968bacfd9e54",
@@ -217,9 +268,9 @@
                 },
                 {
                     "key": "field_5968bb57d9e5b",
-                    "label": "Images",
-                    "name": "images",
-                    "type": "gallery",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -228,9 +279,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "min": "",
-                    "max": "",
-                    "insert": "append",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -295,5 +345,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1500035993
+    "modified": 1500642117
 }
