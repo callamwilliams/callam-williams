@@ -305,7 +305,9 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [],
+            "post_type": [
+                "project"
+            ],
             "taxonomy": [],
             "filters": [
                 "search"
@@ -345,5 +347,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1500642117
+    "modified": 1500740373
 }
