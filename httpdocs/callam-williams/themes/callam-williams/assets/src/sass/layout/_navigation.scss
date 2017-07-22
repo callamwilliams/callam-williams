@@ -1,0 +1,13 @@
+.navigation {
+	@include font-size(20px, 30px);
+
+	display: flex;
+	margin: 0 10px;
+	list-style: none;
+
+	&__item {
+		margin: 0 20px;
+		padding: 0 10px;
+	}
+
+}

@@ -12,38 +12,72 @@ $loop = new WP_Query( $args );
 ?>
 
 <? foreach ( array_chunk( $loop->posts, 3, false ) as $article ) : ?>
-	<? if ( isset( $article[0] ) ): ?>
+	<? $i = 0; ?>
+	<? if ( isset( $article[ $i ] ) ): ?>
+		<?
+		$image      = get_field( 'project_image', $article[ $i ]->ID );
+		$type       = get_field( 'project_type', $article[ $i ]->ID );
+		$highlights = get_field( 'project_highlights', $article[ $i ]->ID );
+		?>
+
 		<article class="">
-			<a class="" href="<?= get_post_permalink( $article[0]->ID ); ?>">
+			<div class="js-img lazyload image image--project" data-bg="<?= $image['sizes']['card'] ?>"></div>
+			<a class="" href="<?= get_post_permalink( $article[ $i ]->ID ); ?>">
 				<header>
-					<h1 class="">
-						<?= $article[0]->post_title; ?>
-					</h1>
+					<h1 class=""><?= $article[ $i ]->post_title; ?></h1>
+					<h2><?= $type ?></h2>
 				</header>
+				<? if ($highlights != '' ): ?>
+					<? foreach ( $highlights as $key => $highlight ): ?>
+						<span><?= $highlights[ $key ]['highlight']; ?></span>
+					<? endforeach; ?>
+				<? endif; ?>
 			</a>
 		</article>
 	<? endif; ?>
 
-	<? if ( isset( $article[1] ) ): ?>
+	<? $i ++; ?>
+	<? if ( isset( $article[ $i ] ) ): ?>
+		<?
+		$image      = get_field( 'project_image', $article[ $i ]->ID );
+		$type       = get_field( 'project_type', $article[ $i ]->ID );
+		$highlights = get_field( 'project_highlights', $article[ $i ]->ID );
+		?>
 		<article class="">
-			<a class="" href="<?= get_post_permalink( $article[1]->ID ); ?>">
+			<div class="js-img lazyload image image--project" data-bg="<?= $image['sizes']['card'] ?>"></div>
+			<a class="" href="<?= get_post_permalink( $article[ $i ]->ID ); ?>">
 				<header>
-					<h1 class="">
-						<?= $article[1]->post_title; ?>
-					</h1>
+					<h1 class=""><?= $article[ $i ]->post_title; ?></h1>
+					<h2><?= $type ?></h2>
 				</header>
+				<? if ( isset( $highlights ) ): ?>
+					<? foreach ( $highlights as $key => $highlight ): ?>
+						<span><?= $highlights[ $key ]['highlight']; ?></span>
+					<? endforeach; ?>
+				<? endif; ?>
 			</a>
 		</article>
 	<? endif; ?>
 
-	<? if ( isset( $article[2] ) ): ?>
+	<? $i ++; ?>
+	<? if ( isset( $article[ $i ] ) ): ?>
+		<?
+		$image      = get_field( 'project_image', $article[ $i ]->ID );
+		$type       = get_field( 'project_type', $article[ $i ]->ID );
+		$highlights = get_field( 'project_highlights', $article[ $i ]->ID );
+		?>
 		<article class="">
-			<a class="" href="<?= get_post_permalink( $article[2]->ID ); ?>">
+			<div class="js-img lazyload image image--project" data-bg="<?= $image['sizes']['card'] ?>"></div>
+			<a class="" href="<?= get_post_permalink( $article[ $i ]->ID ); ?>">
 				<header>
-					<h1 class="">
-						<?= $article[2]->post_title; ?>
-					</h1>
+					<h1 class=""><?= $article[ $i ]->post_title; ?></h1>
+					<h2><?= $type ?></h2>
 				</header>
+				<? if ( isset( $highlights ) ): ?>
+					<? foreach ( $highlights as $key => $highlight ): ?>
+						<span><?= $highlights[ $key ]['highlight']; ?></span>
+					<? endforeach; ?>
+				<? endif; ?>
 			</a>
 		</article>
 	<? endif; ?>

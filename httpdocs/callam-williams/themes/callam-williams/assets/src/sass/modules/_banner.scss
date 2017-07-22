@@ -1,0 +1,82 @@
+.banner {
+	&--fullscreen {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100vw;
+		height: calc(100vh - 100px);
+		background: url('/callam-williams/themes/callam-williams/assets/img/callam.jpg') center center no-repeat;
+		background-size: cover;
+		color: $brand-tertiary;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba($brand-secondary, 0.6);
+		}
+	}
+
+	&__content {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		max-width: 655px;
+		margin-bottom: 50px;
+		padding: 3% 20px;
+		border: 5px solid $brand-tertiary;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		@include font-size(30px, 45px);
+		letter-spacing: 7px;
+
+		span {
+			font-weight: bold;
+		}
+	}
+
+	&__subtitle {
+		@include font-size(15px, 45px);
+		letter-spacing: 20px;
+	}
+
+	&__links {
+		@include font-size(15px, 15px);
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		max-width: 655px;
+	}
+
+	&__link {
+		position: relative;
+		padding: 0 20px;
+
+		&::after {
+			content: '|';
+			position: absolute;
+			top: 3px;
+			right: 0;
+		}
+
+		&:last-child {
+			&::after {
+				content: '';
+			}
+		}
+
+		span {
+			padding-right: 5px;
+		}
+	}
+}

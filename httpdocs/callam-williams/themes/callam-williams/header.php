@@ -55,16 +55,29 @@
 		<? endforeach ?>
 	</script>
 
+	<link href="https://file.myfontastic.com/PDWcbVKP7RVffhs7RkawMA/icons.css" rel="stylesheet">
+
 	<?php wp_head(); ?>
 
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
 
+<? if ( is_front_page() ): ?>
+	<? include( locate_template( '/page/banner.php' ) ); ?>
+<? endif; ?>
+
 <header class="header">
-	<nav>
-		<?php bem_menu( 'navigation', 'navigation__list' ); ?>
-	</nav>
+	<div class="header__content">
+		<h1 class="header__title"><span>Callam</span> Williams</h1>
+
+		<div class="header__navigation">
+			<?= bem_menu( 'primary-navigation', 'navigation' ); ?>
+			<span class="icon-github"></span>
+			<span class="icon-stack-overflow"></span>
+			<span class="icon-twitter"></span>
+		</div>
+	</div>
 </header>
 
 <main id="main" class="<?= ! is_front_page() ? 'main--away' : null; ?>">

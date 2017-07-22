@@ -1,0 +1,35 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 100px;
+	background: $brand-primary;
+	color: $brand-tertiary;
+	text-transform: uppercase;
+
+	&__title {
+		@include font-size(22px, 25px);
+
+		span {
+			font-weight: bold;
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: rem-calc(1840);
+	}
+
+	&__navigation {
+		display: flex;
+
+		span {
+			margin: 0 10px;
+			padding: 0 5px;
+		}
+	}
+
+}

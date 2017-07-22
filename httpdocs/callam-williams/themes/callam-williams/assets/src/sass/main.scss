@@ -4,10 +4,13 @@
 @import 'lib/reset';
 @import 'lib/foundation-grid/main';
 @import 'base/base';
-@import 'components/title';
-@import 'components/text';
 @import 'layout/layout';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/navigation';
+
+@import 'components/title';
+@import 'components/text';
+@import 'modules/banner';
+
 @import 'base/helpers';
