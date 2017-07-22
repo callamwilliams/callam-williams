@@ -1,0 +1,46 @@
+.svg {
+	position: relative;
+	z-index: 1;
+	width: 56px;
+	height: 56px;
+
+	&--one {
+		position: absolute;
+		bottom: 50px;
+		left: 20%;
+	}
+
+	&--two {
+		.svg__odd,
+		.svg__even {
+			transform-origin: center;
+			animation: rotate 3s infinite forwards;
+		}
+
+		.svg__even {
+			animation-delay: 1.5s;
+		}
+	}
+
+	&--three {
+		position: absolute;
+		bottom: -100px;
+		left: 40%;
+	}
+
+	&--four {
+		position: relative;
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(90deg);
+	}
+	25%, 100% {
+		transform: rotate(90deg);
+	}
+}

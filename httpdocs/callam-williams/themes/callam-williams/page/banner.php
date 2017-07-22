@@ -11,7 +11,7 @@
 		<a class="banner__link" href="//www.github.com/callamwilliams">
 			<span class="icon-github"></span>/callamwilliams
 		</a>
-		<a class="banner__link" href="//www.stackoverflow.com/callamwilliams">
+		<a class="banner__link" href="https://stackoverflow.com/users/822671/callam">
 			<span class="icon-stack-overflow"></span>/callamwilliams
 		</a>
 		<a class="banner__link" href="//www.twitter.com/callamwilliams">

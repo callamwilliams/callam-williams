@@ -10,7 +10,7 @@
 
 	&__title {
 		@include font-size(22px, 25px);
-
+		padding-left: 20px;
 		span {
 			font-weight: bold;
 		}
