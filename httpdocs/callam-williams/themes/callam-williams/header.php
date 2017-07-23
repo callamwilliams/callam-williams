@@ -69,7 +69,9 @@
 
 <header class="header">
 	<div class="header__content">
-		<h1 class="header__title"><span>Callam</span> Williams</h1>
+		<h1 class="header__title">
+			<span>Callam</span> Williams
+		</h1>
 
 		<div class="header__navigation">
 			<?= bem_menu( 'primary-navigation', 'navigation' ); ?>
@@ -80,4 +82,6 @@
 	</div>
 </header>
 
-<main id="main" class="<?= ! is_front_page() ? 'main--away' : null; ?>">
+<section id="js-wrapper">
+	<div class="js-container">
+		<main id="main" class="<?= ! is_front_page() ? 'main--away' : null; ?>">

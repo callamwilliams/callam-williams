@@ -12,6 +12,8 @@
 ?>
 
 </main>
+</div>
+</section>
 
 
 <footer id="footer" class="footer">

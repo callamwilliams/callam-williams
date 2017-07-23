@@ -20,6 +20,12 @@ main {
 	position: relative;
 }
 
+.order-reset {
+	@include mq($small, min) {
+		order: 0;
+	}
+}
+
 .seo {
 	display: block;
 	height: 0;
