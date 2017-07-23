@@ -1080,8 +1080,8 @@ html {
 body {
   font-size: 15px;
   font-size: 0.9375rem;
-  line-height: 20px;
-  line-height: 1.25rem;
+  line-height: 22px;
+  line-height: 1.375rem;
   width: 100%;
   height: auto;
   margin: 0;
@@ -1186,8 +1186,45 @@ h1, h2, h3, h4, h5, h6 {
     display: -ms-flexbox;
     display: flex; }
     .header__navigation span {
-      margin: 0 10px;
+      margin: 5px 10px 0;
       padding: 0 5px; }
+
+.footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 100%;
+  max-width: 115rem;
+  min-height: 400px;
+  margin: 20px auto; }
+  .footer__links {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 15px;
+    line-height: 0.9375rem;
+    position: relative;
+    z-index: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    width: 100%;
+    max-width: 655px; }
+  .footer__link {
+    position: relative;
+    padding: 0 20px; }
+    .footer__link::after {
+      content: '|';
+      position: absolute;
+      top: 3px;
+      right: 0; }
+    .footer__link:last-child::after {
+      content: ''; }
+    .footer__link span {
+      padding-right: 5px; }
 
 .navigation {
   font-size: 20px;
@@ -1231,6 +1268,22 @@ h1, h2, h3, h4, h5, h6 {
   25%, 100% {
     transform: rotate(90deg); } }
 
+@keyframes slideAcross {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  50% {
+    transform: translate3d(0, 56px, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes slideDown {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  50% {
+    transform: translate3d(56px, 0, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
 .banner--fullscreen {
   position: relative;
   display: -ms-flexbox;
@@ -1242,7 +1295,7 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-pack: center;
       justify-content: center;
   width: 100%;
-  height: calc(100vh - 100px);
+  height: 100vh;
   background: url("/callam-williams/themes/callam-williams/assets/img/callam.jpg") center center no-repeat;
   background-size: cover;
   color: #C2B9AF; }
@@ -1455,7 +1508,18 @@ h1, h2, h3, h4, h5, h6 {
   .project__type {
     margin-bottom: 20px; }
   .project__highlights {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    padding: 0 20px 0 0; }
+    .project__highlights span {
+      position: relative;
+      padding-right: 10px; }
+      .project__highlights span::after {
+        content: '/';
+        position: absolute;
+        top: -1px;
+        right: 0; }
+      .project__highlights span:last-child::after {
+        content: ''; }
   .project__link {
     font-size: 18px;
     font-size: 1.125rem;

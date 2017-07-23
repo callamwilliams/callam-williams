@@ -1,0 +1,41 @@
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: rem-calc(1840);
+	min-height: 400px;
+	margin: 20px auto;
+
+	&__links {
+		@include font-size(15px, 15px);
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		max-width: 655px;
+	}
+
+	&__link {
+		position: relative;
+		padding: 0 20px;
+
+		&::after {
+			content: '|';
+			position: absolute;
+			top: 3px;
+			right: 0;
+		}
+
+		&:last-child {
+			&::after {
+				content: '';
+			}
+		}
+
+		span {
+			padding-right: 5px;
+		}
+	}
+}

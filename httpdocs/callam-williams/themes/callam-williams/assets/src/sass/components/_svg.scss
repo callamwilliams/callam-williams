@@ -8,6 +8,7 @@
 		position: absolute;
 		bottom: 50px;
 		left: 20%;
+
 	}
 
 	&--two {
@@ -42,5 +43,29 @@
 	}
 	25%, 100% {
 		transform: rotate(90deg);
+	}
+}
+
+@keyframes slideAcross  {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	50% {
+		transform: translate3d(0, 56px, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes slideDown{
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	50% {
+		transform: translate3d(56px, 0, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
 	}
 }
