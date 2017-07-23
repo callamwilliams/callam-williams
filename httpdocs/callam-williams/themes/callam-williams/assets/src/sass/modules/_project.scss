@@ -180,24 +180,6 @@
 		margin-bottom: 20px;
 		padding: 0 20px 0 0;
 
-		span {
-			position: relative;
-			padding-right: 10px;
-
-			&::after {
-				content: '/';
-				position: absolute;
-				top: -1px;
-				right: 0;
-			}
-
-			&:last-child {
-				&::after {
-					content: '';
-				}
-			}
-		}
-
 	}
 
 	&__link {
