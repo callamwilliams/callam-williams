@@ -77,6 +77,11 @@
 
 		<div class="header__navigation">
 			<?= bem_menu( 'primary-navigation', 'navigation' ); ?>
+
+			<a class="navigation__item" href="mailto:callam.williams@outlook@@com"
+			   onmouseover="this.href=this.href.replace('@@','.')">
+				Contact
+			</a>
 			<span class="icon-github"></span>
 			<span class="icon-stack-overflow"></span>
 			<span class="icon-twitter"></span>

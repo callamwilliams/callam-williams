@@ -368,6 +368,13 @@ h1, h2, h3, h4, h5, h6 {
 main {
   position: relative; }
 
+p a {
+  color: #3C3B4D;
+  text-decoration: underline;
+  transition: color 0.2s cubic-bezier(0.23, 1, 0.32, 1); }
+  p a:hover {
+    color: #C2B9AF; }
+
 .seo {
   display: block;
   height: 0;
@@ -908,6 +915,10 @@ main {
   .project__type {
     margin-bottom: 20px; }
   .project__highlights {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 22px;
+    line-height: 1.375rem;
     margin-bottom: 20px;
     padding: 0 20px 0 0; }
   .project__link {

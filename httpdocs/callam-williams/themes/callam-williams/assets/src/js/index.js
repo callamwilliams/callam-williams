@@ -1,7 +1,7 @@
 import Flickity from 'flickity';
 import 'lazysizes';
 import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
-import BarbaSetup from './classes/BarbaSetup';
+import Init from './classes/Init';
 import Parallax from './classes/Parallax';
 import Util from './classes/Util';
 
@@ -117,4 +117,4 @@ const pageFunctions = {
 };
 
 
-window.addEventListener('load', BarbaSetup.runBarbaJs(pageFunctions));
+window.functionCore = new Init(pageFunctions);

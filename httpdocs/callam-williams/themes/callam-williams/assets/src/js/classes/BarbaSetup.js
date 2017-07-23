@@ -1,5 +1,5 @@
 import Barba from 'barba.js';
-import Init from './Init';
+
 
 class BarbaSetup {
 
@@ -57,7 +57,7 @@ class BarbaSetup {
 
 		// Reinitialise PropCore when everything has finished
 		Barba.Dispatcher.on('transitionCompleted', () => {
-			window.propCore = new Init(pageFunctions);
+			window.functionCore = new Init(pageFunctions);
 		});
 
 		const pageTransition = Barba.BaseTransition.extend({

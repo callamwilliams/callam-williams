@@ -20,6 +20,17 @@ main {
 	position: relative;
 }
 
+p {
+	a {
+		color: $brand-secondary;
+		text-decoration: underline;
+		transition: color 0.2s $transition;
+
+		&:hover {
+			color: $brand-tertiary;
+		}
+	}
+}
 
 .seo {
 	display: block;
@@ -27,3 +38,4 @@ main {
 	overflow: hidden;
 	text-indent: -9999px;
 }
+

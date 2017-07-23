@@ -38,7 +38,7 @@ $loop = new WP_Query( $args );
 						<? if ( $highlights != '' ): ?>
 							<div class="project__highlights">
 								<? foreach ( $highlights as $key => $highlight ): ?>
-									<span><?= $highlights[ $key ]['highlight']; ?> / </span>
+									<span><?= $highlights[ $key ]['highlight']; ?></span>
 								<? endforeach; ?>
 							</div>
 						<? endif; ?>
@@ -72,7 +72,7 @@ $loop = new WP_Query( $args );
 						<? if ( $highlights != '' ): ?>
 							<div class="project__highlights">
 								<? foreach ( $highlights as $key => $highlight ): ?>
-									<span><?= $highlights[ $key ]['highlight']; ?> / </span>
+									<span><?= $highlights[ $key ]['highlight']; ?></span>
 								<? endforeach; ?>
 							</div>
 						<? endif; ?>
@@ -104,7 +104,7 @@ $loop = new WP_Query( $args );
 							<? if ( $highlights != '' ): ?>
 								<div class="project__highlights">
 									<? foreach ( $highlights as $key => $highlight ): ?>
-										<span><?= $highlights[ $key ]['highlight']; ?> / </span>
+										<span><?= $highlights[ $key ]['highlight']; ?></span>
 									<? endforeach; ?>
 								</div>
 							<? endif; ?>

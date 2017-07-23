@@ -23,7 +23,6 @@ $loop = new WP_Query( $args ); ?>
 			<?
 			$image      = get_field( 'project_image', $loop->ID );
 			$type       = get_field( 'project_type', $loop->ID );
-			$highlights = get_field( 'project_highlights', $loop->ID );
 			?>
 
 			<article class="project project--other">
@@ -34,13 +33,6 @@ $loop = new WP_Query( $args ); ?>
 							<h1 class="project__title"><?= $loop->post_title; ?></h1>
 							<h2 class="project__type"><?= $type ?></h2>
 						</header>
-						<? if ( $highlights != '' ): ?>
-							<div class="project__highlights">
-								<? foreach ( $highlights as $key => $highlight ): ?>
-									<span><?= $highlights[ $key ]['highlight']; ?> / </span>
-								<? endforeach; ?>
-							</div>
-						<? endif; ?>
 					</div>
 					<div class="project__link">
 						View Project
