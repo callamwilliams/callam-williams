@@ -1,49 +1,53 @@
 <? if ( have_rows( 'project_content' ) ): ?>
-	<section class="row">
-		<div class="small-12">
-			<div class="row small-up-1 medium-up-2 small-collapse">
-				<? $count = 0; ?>
-				<?php while ( have_rows( 'project_content' ) ): the_row();
+	<section class="post__detail">
 
-					$count ++;
-					$text  = get_sub_field( 'text' );
-					$image = get_sub_field( 'image' );
-					?>
+		<? $count = 0; ?>
+		<? $i = 0; ?>
+		<?php while ( have_rows( 'project_content' ) ): the_row();
 
-					<? if ( ( $count % 2 ) === 0 ): ?>
+			$count ++;
+			$i ++;
+			$text  = get_sub_field( 'text' );
+			$image = get_sub_field( 'image' );
+			?>
 
-						<div class="column">
-							<figure class="js-img js-parallax lazyload" data-bg="<?= $image['sizes']['card']; ?>">
-								<? if ( $image['alt'] != '' ): ?>
-									<figcaption class="seo">
-										<?= $image['alt']; ?>
-									</figcaption>
-								<? endif; ?>
-							</figure>
-						</div>
+			<article class="post__row">
 
-					<? endif; ?>
+				<? if ( ( $count % 2 ) === 0 ): ?>
 
-					<div class="column <?= ( ( $count % 2 ) == 1 ) ? 'small-order-2 medium-order-reset' : null ?>">
-						<?= $text ?>
+					<div class="post__img">
+						<figure class="js-img lazyload" data-bg="<?= $image['sizes']['card']; ?>">
+							<? if ( $image['alt'] != '' ): ?>
+								<figcaption class="seo">
+									<?= $image['alt']; ?>
+								</figcaption>
+							<? endif; ?>
+						</figure>
 					</div>
 
-					<? if ( ( $count % 2 ) === 1 ): ?>
+				<? endif; ?>
 
-						<div class="column small-order-1 medium-order-reset">
-							<figure class="js-img js-parallax lazyload" data-bg="<?= $image['sizes']['card']; ?>">
-								<? if ( $image['alt'] != '' ): ?>
-									<figcaption class="seo">
-										<?= $image['alt']; ?>
-									</figcaption>
-								<? endif; ?>
-							</figure>
-						</div>
+				<div class="post__text <?= ( ( $count % 2 ) == 1 ) ? 'order-reset' : 'post__text--right' ?>">
+					<? include get_template_directory() . '/assets/svg/pattern' . $i . '.svg' ?>
+					<?= $text ?>
+				</div>
 
-					<? endif; ?>
+				<? if ( ( $count % 2 ) === 1 ): ?>
 
-				<?php endwhile; ?>
-			</div>
-		</div>
+					<div class="post__img">
+						<figure class="js-img lazyload" data-bg="<?= $image['sizes']['card']; ?>">
+							<? if ( $image['alt'] != '' ): ?>
+								<figcaption class="seo">
+									<?= $image['alt']; ?>
+								</figcaption>
+							<? endif; ?>
+						</figure>
+					</div>
+
+				<? endif; ?>
+
+			</article>
+
+		<?php endwhile; ?>
 	</section>
 <?php endif; ?>

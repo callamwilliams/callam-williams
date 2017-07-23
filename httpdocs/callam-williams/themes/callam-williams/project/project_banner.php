@@ -1,45 +1,29 @@
 <?
-$project_image       = get_field( 'project_image' );
-$project_banner_type = get_field( 'project_banner_type' );
-$project_type        = get_field( 'project_type' );
-$project_link        = get_field( 'project_link' );
-
+$banner_type = get_field( 'project_banner_type' );
+$images      = get_field( 'project_gallery' );
 ?>
 
-<?= $project_image ?>
-<?= $project_type ?>
-<?= $project_link ?>
-
-<? if ( $project_banner_type == 'Image' ):
-
-	$images = get_field( 'project_gallery' );
-
-	?>
+<? if ( $banner_type == 'image' ): ?>
 
 	<section>
-		<div class="row">
-			<div class="small-12">
-				<div class="banner <?= $banner_height ?>">
-					<div class="js-slider">
-						<?php foreach ( $images as $image ): ?>
+		<div class="banner banner--post">
+			<div class="js-slider">
+				<?php foreach ( $images as $image ): ?>
 
-							<figure class="js-img lazyload banner__img" data-bg="<?= $image['sizes']['banner']; ?>">
-								<? if ( $image['alt'] != '' ): ?>
-									<figcaption class="seo">
-										<?= $image['alt']; ?>
-									</figcaption>
-								<? endif; ?>
-							</figure>
+					<figure class="js-img lazyload banner__img" data-bg="<?= $image['sizes']['banner']; ?>">
+						<? if ( $image['alt'] != '' ): ?>
+							<figcaption class="seo">
+								<?= $image['alt']; ?>
+							</figcaption>
+						<? endif; ?>
+					</figure>
 
-						<? endforeach; ?>
-					</div>
-				</div>
+				<? endforeach; ?>
 			</div>
 		</div>
 	</section>
 
-
-<? elseif ( $project_banner_type == 'Video' ): ?>
+<? elseif ( $banner_type == 'video' ): ?>
 
 	<?
 	$iframe   = get_field( 'project_video' );
@@ -52,14 +36,17 @@ $project_link        = get_field( 'project_link' );
 
 	<? if ( $iframe ): ?>
 		<section>
-			<div class="row row--large">
-				<div class="small-12">
-					<div class="banner">
-						<div id="js-video" class="banner__video iframe" data-src="<?= $youtube_id ?>" data-autoplay="<?= $autoplay ?>">
-							<div class="js-img" id="player" data-player="true"></div>
-						</div>
-					</div>
+			<div class="banner banner--post">
+				<div id="js-video" class="banner__video iframe" data-src="<?= $youtube_id ?>" data-autoplay="<?= $autoplay ?>">
+					<div class="js-img" id="player" data-player="true"></div>
 				</div>
+				<figure class="js-img lazyload banner__img" data-bg="<?= $image['sizes']['banner']; ?>">
+					<? if ( $image['alt'] != '' ): ?>
+						<figcaption class="seo">
+							<?= $image['alt']; ?>
+						</figcaption>
+					<? endif; ?>
+				</figure>
 			</div>
 		</section>
 	<? endif; ?>

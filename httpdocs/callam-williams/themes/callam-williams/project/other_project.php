@@ -1,33 +1,59 @@
 <?
+$ids = get_field( 'other_projects', false, false );
+
 $args = [
 	'post_type'      => 'project',
-	'posts_per_page' => 4,
+	'posts_per_page' => 3,
+	'post__in'       => $ids,
 	'orderby'        => 'date',
 	'order'          => 'DESC',
 	'post_status'    => 'publish',
 ];
 $loop = new WP_Query( $args ); ?>
 
-<section class="">
+<section class="other">
+	<h1 class="other__title">Other Projects</h1>
+	<div class="other__inner">
+		<div class="other__pattern">
+			<? include get_template_directory() . '/assets/svg/pattern4.svg' ?>
+		</div>
 
-	<? while ( $loop->have_posts() ) : $loop->the_post(); ?>
+		<? while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-		<? $project_image = get_field( 'project_image', $loop->ID ); ?>
-		<? $project_blurb = get_field( 'project_blurb', $loop->ID ); ?>
+			<?
+			$image      = get_field( 'project_image', $loop->ID );
+			$type       = get_field( 'project_type', $loop->ID );
+			$highlights = get_field( 'project_highlights', $loop->ID );
+			?>
 
-		<article class="">
-			<a class="" href="<? the_permalink(); ?>">
-				<figure class="js-img" data-bg="<?= $project_image; ?>">
-					<figcaption>
-						<h1 class=""><? the_title(); ?></h1>
-						<p><?= $project_blurb ?></p>
-					</figcaption>
-				</figure>
-			</a>
-		</article>
+			<article class="project project--other">
+				<div class="js-img project__image image image--project lazyload" data-bg="<?= $image['sizes']['card'] ?>"></div>
+				<a class="project__content" href="<?= get_post_permalink( $loop->ID ); ?>">
+					<div class="project__text">
+						<header class="project__header">
+							<h1 class="project__title"><?= $loop->post_title; ?></h1>
+							<h2 class="project__type"><?= $type ?></h2>
+						</header>
+						<? if ( $highlights != '' ): ?>
+							<div class="project__highlights">
+								<? foreach ( $highlights as $key => $highlight ): ?>
+									<span><?= $highlights[ $key ]['highlight']; ?></span>
+								<? endforeach; ?>
+							</div>
+						<? endif; ?>
+					</div>
+					<div class="project__link">
+						View Project
+						<span class="icon-angle-double-right"></span>
+					</div>
+				</a>
+			</article>
 
-	<?php endwhile; ?>
-
+		<?php endwhile; ?>
+		<div class="other__pattern other__pattern--alt">
+			<? include get_template_directory() . '/assets/svg/pattern3.svg' ?>
+		</div>
+	</div>
 </section>
 
 <?php wp_reset_postdata(); ?>

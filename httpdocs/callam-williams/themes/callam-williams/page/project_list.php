@@ -2,8 +2,8 @@
 
 $args = [
 	'post_type'   => 'project',
-	'orderby'     => 'meta',
-	'order'       => 'DESC',
+	'orderby'     => 'date',
+	'order'       => 'ASC',
 	'post_status' => 'publish'
 ];
 

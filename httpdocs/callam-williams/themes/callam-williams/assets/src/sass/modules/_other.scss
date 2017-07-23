@@ -1,0 +1,38 @@
+.other {
+	position: relative;
+	display: flex;
+	width: 100%;
+	max-width: rem-calc(1700px);
+	margin: 0 auto;
+	padding: 50px 20px;
+	background-color: $brand-tertiary;
+
+	&__title {
+		@include font-size(50px, 50px);
+		position: absolute;
+		top: -25px;
+		text-transform: uppercase;
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 100%;
+		max-width: rem-calc(1240px);
+		margin: 0 auto;
+	}
+
+	&__pattern {
+		position: absolute;
+		top: 10%;
+		left: 5%;
+
+		&--alt {
+			top: initial;
+			right: 10%;
+			bottom: 11%;
+			left: initial;
+		}
+	}
+}

@@ -22,6 +22,59 @@
 		}
 	}
 
+	&--header {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		width: 100%;
+		min-height: 400px;
+		overflow: hidden;
+
+		.banner__img {
+			position: absolute;
+			top: -20px;
+			right: 0;
+			bottom: -20px;
+			left: 0;
+			width: 100%;
+			background-position: center center;
+			background-size: cover;
+			mix-blend-mode: luminosity;
+			filter: blur(2.6px);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			background: rgba($brand-secondary, 0.6);
+		}
+	}
+
+	&--post {
+		@include aspect-ratio(1240, 640);
+		position: relative;
+		width: 100%;
+		max-width: 1240px;
+		margin: 0 auto 50px;
+		border:1px solid $base-tertiary;
+
+		.banner__img,
+		.banner__video {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-size: cover;
+		}
+	}
+
 	&__content {
 		position: relative;
 		z-index: 1;

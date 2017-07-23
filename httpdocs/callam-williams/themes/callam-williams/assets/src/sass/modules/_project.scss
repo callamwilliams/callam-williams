@@ -93,6 +93,26 @@
 		}
 	}
 
+	&--other {
+		flex-basis: 32%;
+		max-width: 32%;
+
+		&:nth-child(even){
+			transform:translateY(-75px);
+		}
+
+		.project__image {
+			@include aspect-ratio(400, 400);
+			position: relative;
+			max-width: 400px;
+		}
+		.project__content {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
 	&__full {
 		position: relative;
 		display: flex;

@@ -1,0 +1,19 @@
+.btn {
+	@include font-size(18px, 18px);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 295px;
+	height: 80px;
+	padding: 0 30px;
+	background-color: $brand-tertiary;
+	color: $brand-primary;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	&--alt {
+		background-color: $brand-secondary;
+		color: $brand-tertiary;
+	}
+}

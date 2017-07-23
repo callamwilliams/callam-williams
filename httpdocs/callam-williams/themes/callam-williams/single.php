@@ -15,18 +15,64 @@
 
 
 get_header(); ?>
+<? $image = get_field( 'project_image' ); ?>
+<div class="banner banner--header">
+	<div class="js-img banner__img lazyload" data-bg="<?= $image['sizes']['banner']; ?>"></div>
+</div>
 
-<? include( locate_template( '/project/project_banner.php' ) ); ?>
 
-<? $project_highlights = get_field( 'project_highlights' ); ?>
-<? $project_blurb = get_field( 'project_blurb' ); ?>
+<?
+$project_type = get_field( 'project_type' );
+$project_link = get_field( 'project_link' );
+?>
+<section class="post">
+	<div class="post__info">
+		<div class="post__labels">
+			<h1 class="post__title"><? the_title(); ?></h1>
+			<h2 class="post__subtitle"><?= $project_type ?></h2>
+		</div>
 
-<?= $project_blurb ?>
-<?= $project_highlights ?>
+		<a href="<?= $project_link ?>" class="btn">
+			View Project
+			<span class="icon-angle-double-right"></span>
+		</a>
+	</div>
 
-<? include( locate_template( '/project/project_content.php' ) ); ?>
-<? include( locate_template( '/project/other_projects.php' ) ); ?>
+	<? include( locate_template( '/project/project_banner.php' ) ); ?>
 
+	<? $project_blurb = get_field( 'project_blurb' ); ?>
+	<? $project_highlights = get_field( 'project_highlights' ); ?>
+
+	<header class="post__head">
+		<div class="post__blurb">
+			<?= $project_blurb ?>
+		</div>
+		<div class="post__highlights">
+			<? if ( $project_highlights != '' ): ?>
+				<div class="project__highlights">
+					<? foreach ( $project_highlights as $key => $highlight ): ?>
+						<span><?= $project_highlights[ $key ]['highlight']; ?></span>
+					<? endforeach; ?>
+				</div>
+			<? endif; ?>
+		</div>
+		<div class="post__pattern">
+			<? include get_template_directory() . '/assets/svg/pattern4.svg' ?>
+		</div>
+	</header>
+
+	<? include( locate_template( '/project/project_content.php' ) ); ?>
+
+	<div class="post__link">
+		<a href="<?= $project_link ?>" class="btn btn--alt">
+			View Project
+			<span class="icon-angle-double-right"></span>
+		</a>
+	</div>
+
+	<? include( locate_template( '/project/other_project.php' ) ); ?>
+
+</section>
 <?php get_footer(); ?>
 
 
