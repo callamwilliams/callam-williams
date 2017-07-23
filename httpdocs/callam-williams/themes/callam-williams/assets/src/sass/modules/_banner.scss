@@ -31,6 +31,10 @@
 		min-height: 400px;
 		overflow: hidden;
 
+		@include mq($medium){
+			min-height: 400px;
+		}
+
 		.banner__img {
 			position: absolute;
 			top: -20px;
@@ -89,11 +93,20 @@
 		border: 5px solid $brand-tertiary;
 		text-align: center;
 		text-transform: uppercase;
+
+		@include mq($small) {
+			width: 90%;
+			margin: 0 auto 50px;
+		}
 	}
 
 	&__title {
 		@include font-size(30px, 45px);
 		letter-spacing: 7px;
+
+		@include mq($xsmall) {
+			@include font-size(22px, 30px);
+		}
 
 		span {
 			font-weight: bold;
@@ -103,6 +116,11 @@
 	&__subtitle {
 		@include font-size(15px, 45px);
 		letter-spacing: 20px;
+
+		@include mq($small) {
+			@include font-size(15px, 30px);
+			letter-spacing: 10px;
+		}
 	}
 
 	&__links {
@@ -113,17 +131,29 @@
 		justify-content: center;
 		width: 100%;
 		max-width: 655px;
+
+		@include mq($xsmall) {
+			@include font-size(30px, 30px);
+		}
 	}
 
 	&__link {
 		position: relative;
 		padding: 0 20px;
 
+		@include mq($xsmall) {
+			margin-bottom: 20px;
+		}
+
 		&::after {
 			content: '|';
 			position: absolute;
 			top: 3px;
 			right: 0;
+
+			@include mq($xsmall) {
+				content: '';
+			}
 		}
 
 		&:last-child {

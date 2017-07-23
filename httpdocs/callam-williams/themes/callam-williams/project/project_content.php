@@ -27,7 +27,7 @@
 
 				<? endif; ?>
 
-				<div class="post__text <?= ( ( $count % 2 ) == 1 ) ? 'order-reset' : 'post__text--right' ?>">
+				<div class="post__text <?= ( ( $count % 2 ) == 1 ) ? '' : 'post__text--right' ?>">
 					<? include get_template_directory() . '/assets/svg/pattern' . $i . '.svg' ?>
 					<?= $text ?>
 				</div>

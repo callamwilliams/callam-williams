@@ -9,13 +9,13 @@
 	</figure>
 	<div class="banner__links">
 		<a class="banner__link" href="//www.github.com/callamwilliams">
-			<span class="icon-github"></span>/callamwilliams
+			<span class="icon-github"></span><span class="small-hide">/callamwilliams</span>
 		</a>
 		<a class="banner__link" href="https://stackoverflow.com/users/822671/callam">
-			<span class="icon-stack-overflow"></span>/callamwilliams
+			<span class="icon-stack-overflow"></span><span class="small-hide">/callamwilliams</span>
 		</a>
 		<a class="banner__link" href="//www.twitter.com/callamwilliams">
-			<span class="icon-twitter"></span>@callamwilliams
+			<span class="icon-twitter"></span><span class="small-hide">@callamwilliams</span>
 		</a>
 	</div>
 </section>

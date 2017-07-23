@@ -15,17 +15,30 @@
 		justify-content: center;
 		width: 100%;
 		max-width: 655px;
+
+		@include mq($xsmall) {
+			@include font-size(30px, 30px);
+		}
+
 	}
 
 	&__link {
 		position: relative;
 		padding: 0 20px;
 
+		@include mq($xsmall) {
+			margin-bottom: 20px;
+		}
+
 		&::after {
 			content: '|';
 			position: absolute;
 			top: 3px;
 			right: 0;
+
+			@include mq($xsmall) {
+				content: '';
+			}
 		}
 
 		&:last-child {

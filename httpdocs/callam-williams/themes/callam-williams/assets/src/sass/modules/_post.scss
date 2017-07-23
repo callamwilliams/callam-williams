@@ -26,6 +26,12 @@
 		margin: 0 auto;
 		padding: 0 20px;
 		color: $brand-tertiary;
+
+		@include mq($medium) {
+			flex-direction: column;
+			justify-content: space-around;
+			min-height: 400px;
+		}
 	}
 
 	&__head {
@@ -36,6 +42,18 @@
 		width: 100%;
 		max-width: rem-calc(1240);
 		margin: 0 auto 50px;
+
+		@include mq($large) {
+			padding: 0 20px;
+		}
+
+		@include mq($medium) {
+			margin-bottom: 100px;
+
+			.post__pattern {
+				display: none;
+			}
+		}
 	}
 
 	.post__pattern {
@@ -57,6 +75,10 @@
 
 	&__blurb {
 		max-width: 610px;
+
+		@include mq($medium) {
+			max-width: 100%;
+		}
 	}
 
 	&__detail {
@@ -67,6 +89,10 @@
 		width: 100%;
 		max-width: rem-calc(1240);
 		margin: 0 auto 50px;
+
+		@include mq($large) {
+			padding: 0 20px;
+		}
 	}
 
 	&__row {
@@ -81,16 +107,30 @@
 	&__text {
 		flex: 50%;
 		max-width: 50%;
+
+		@include mq($medium) {
+			flex: 100%;
+			max-width: 100%;
+		}
 	}
 
 	&__text {
 		position: relative;
 		padding: 0 8%;
 
+		@include mq($medium) {
+			order: 2;
+			margin-top: 100px;
+		}
+
 		.svg {
 			position: absolute;
 			top: -56px;
 			left: 0;
+
+			@include mq($medium) {
+				top: -76px;
+			}
 		}
 
 		&--right {
@@ -104,9 +144,15 @@
 	&__img {
 		@include aspect-ratio(610, 345);
 		position: relative;
-		background-position: center center;
-		background-size: cover;
 		border: 1px solid $base-tertiary;
+
+		@include mq($medium) {
+			order: 1;
+		}
+
+		@include mq($small){
+			@include aspect-ratio(610, 610);
+		}
 
 		figure {
 			position: absolute;
@@ -114,6 +160,8 @@
 			right: 0;
 			bottom: 0;
 			left: 0;
+			background-position: center center;
+			background-size: cover;
 		}
 	}
 

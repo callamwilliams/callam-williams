@@ -12,6 +12,10 @@
 		position: absolute;
 		top: -25px;
 		text-transform: uppercase;
+
+		@include mq($small){
+			@include font-size(35px, 50px);
+		}
 	}
 
 	&__inner {

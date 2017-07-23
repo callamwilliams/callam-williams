@@ -6,6 +6,10 @@
 	max-width: rem-calc(1840);
 	margin: 0 auto;
 
+	@include mq($medium) {
+		padding: 0 20px;
+	}
+
 	&__break {
 		display: flex;
 		width: 100%;
@@ -43,6 +47,11 @@
 	margin: 0 auto;
 	color: $white;
 
+	@include mq($medium) {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+
 	&--left {
 		.project__image {
 			top: 0;
@@ -64,6 +73,10 @@
 			width: 255px;
 			height: 365px;
 			border: 5px solid $brand-tertiary;
+
+			@include mq($xsmall) {
+				height: 255px;
+			}
 		}
 
 		.project__image {
@@ -82,6 +95,10 @@
 		max-width: 100%;
 		min-height: 690px;
 
+		@include mq($medium) {
+			margin-top: 50px;
+		}
+
 		.project__image {
 			top: 0;
 			left: 0;
@@ -97,9 +114,32 @@
 		flex-basis: 32%;
 		max-width: 32%;
 
-		&:nth-child(even){
-			transform:translateY(-75px);
+		&:nth-child(odd) {
+			transform: translateY(-75px);
+
+			@include mq($medium) {
+				transform: translateY(0);
+			}
 		}
+
+		@include mq($medium) {
+			flex-basis: 45%;
+			max-width: 45%;
+
+			&:nth-child(3) {
+				display: none;
+			}
+		}
+
+		@include mq($small) {
+			flex-basis: 100%;
+			max-width: 100%;
+
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+
 
 		.project__image {
 			@include aspect-ratio(400, 400);
@@ -132,6 +172,13 @@
 			width: 715px;
 			height: 235px;
 			border: 5px solid $brand-tertiary;
+
+			@include mq($medium) {
+				top: 45%;
+				right: initial;
+				left: 20px;
+				width: 300px;
+			}
 		}
 	}
 
@@ -166,8 +213,12 @@
 		}
 	}
 
-	&__title {
+	&__title,
+	&__type {
 		@include font-size(22px, 22px);
+	}
+
+	&__title {
 		text-transform: uppercase;
 	}
 
