@@ -62,7 +62,7 @@
 		width: 100%;
 		max-width: 1240px;
 		margin: 0 auto 50px;
-		border:1px solid $base-tertiary;
+		border: 1px solid $base-tertiary;
 
 		.banner__img,
 		.banner__video {
@@ -72,6 +72,10 @@
 			bottom: 0;
 			left: 0;
 			background-size: cover;
+		}
+
+		.banner__video {
+			z-index: 5;
 		}
 	}
 

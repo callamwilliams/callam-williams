@@ -54,7 +54,7 @@ class Init {
 			this.bindEvents(this.events[clean], operation);
 		}
 
-		window.propCore = this.core;
+		window.functionCore = this.core;
 	}
 
 	bindEvents(events, operation) {

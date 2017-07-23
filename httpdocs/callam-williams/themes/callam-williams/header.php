@@ -70,7 +70,9 @@
 <header class="header">
 	<div class="header__content">
 		<h1 class="header__title">
-			<span>Callam</span> Williams
+			<a href="/">
+				<span>Callam</span> Williams
+			</a>
 		</h1>
 
 		<div class="header__navigation">

@@ -27,7 +27,7 @@ $images      = get_field( 'project_gallery' );
 
 	<?
 	$iframe   = get_field( 'project_video' );
-	$autoplay = get_sub_field( 'project_autoplayTrue' );
+	$autoplay = get_field( 'project_autoplay' );
 	preg_match( '/src="(.+?)"/', $iframe, $matches );
 	$src = $matches[1];
 	preg_match( '/embed\/(.*)\?/', $src, $id_matches );

@@ -26,8 +26,6 @@ class BarbaSetup {
 		});
 
 		Barba.Dispatcher.on('newPageReady', (currentStatus, oldStatus) => {
-			window.scrollTo(0, 0);
-
 			// takes in url string and returns just the slug
 			function returnPath(urlString) {
 				const url = urlString.url;
@@ -60,26 +58,6 @@ class BarbaSetup {
 		// Reinitialise PropCore when everything has finished
 		Barba.Dispatcher.on('transitionCompleted', () => {
 			window.propCore = new Init(pageFunctions);
-		});
-
-		// Set the active class on navigation items
-		Barba.Dispatcher.on('linkClicked', (HTMLElement) => {
-			const activeNavElements = document.getElementsByClassName('navigation__list__item--active');
-			const elementLink = HTMLElement.getAttribute('href');
-			const nav = document.querySelector('.navigation');
-			const navLinkToAddActive = nav.querySelector(`a[href="${elementLink}"]`).parentNode;
-			const burger = document.querySelector('.js-burger');
-			const navigation = document.querySelector('.js-header');
-			const body = document.querySelector('body');
-
-			for (let i = 0; i < activeNavElements.length; i += 1) {
-				activeNavElements[i].classList.remove('navigation__list__item--active');
-			}
-
-			navLinkToAddActive.classList.add('navigation__list__item--active');
-			burger.classList.remove('is-active');
-			navigation.classList.remove('is-active');
-			body.classList.remove('navigation-is-active');
 		});
 
 		const pageTransition = Barba.BaseTransition.extend({
