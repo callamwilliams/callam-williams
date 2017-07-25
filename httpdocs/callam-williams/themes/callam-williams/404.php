@@ -7,11 +7,33 @@
  * @package wppt
  */
 
-get_header(); ?>
+get_header();
 
-<?php esc_html_e( 'That page can&rsquo;t be found.', 'wppt' ); ?>
+?>
 
-<?php esc_html_e( 'It looks like you&rsquo;re lost. Maybe try one of the links below' . esc_url( get_permalink() ) . '', 'wppt' ); ?>
+<section class="banner banner--fullscreen lazyload">
+	<figure class="banner__content">
+		<figcaption>
+			<h1 class="banner__title">
+				<span>You're</span> Lost!
+			</h1>
+			<h2 class="banner__subtitle">
+				<a href="/">Get back home</a>
+			</h2>
+		</figcaption>
+	</figure>
+	<div class="banner__links">
+		<a class="banner__link" href="//www.github.com/callamwilliams" target="_blank" rel="noopener">
+			<span class="icon-github"></span><span class="small-hide">/callamwilliams</span>
+		</a>
+		<a class="banner__link" href="https://stackoverflow.com/users/822671/callam" target="_blank" rel="noopener">
+			<span class="icon-stack-overflow"></span><span class="small-hide">/callamwilliams</span>
+		</a>
+		<a class="banner__link" href="//www.twitter.com/callamwilliams" target="_blank" rel="noopener">
+			<span class="icon-twitter"></span><span class="small-hide">@callamwilliams</span>
+		</a>
+	</div>
+</section>
 
-<?php
-get_footer();
+
+<? get_footer();

@@ -8,13 +8,13 @@
 		</figcaption>
 	</figure>
 	<div class="banner__links">
-		<a class="banner__link" href="//www.github.com/callamwilliams">
+		<a class="banner__link" href="//www.github.com/callamwilliams" target="_blank" rel="noopener">
 			<span class="icon-github"></span><span class="small-hide">/callamwilliams</span>
 		</a>
-		<a class="banner__link" href="https://stackoverflow.com/users/822671/callam">
+		<a class="banner__link" href="https://stackoverflow.com/users/822671/callam" target="_blank" rel="noopener">
 			<span class="icon-stack-overflow"></span><span class="small-hide">/callamwilliams</span>
 		</a>
-		<a class="banner__link" href="//www.twitter.com/callamwilliams">
+		<a class="banner__link" href="//www.twitter.com/callamwilliams" target="_blank" rel="noopener">
 			<span class="icon-twitter"></span><span class="small-hide">@callamwilliams</span>
 		</a>
 	</div>

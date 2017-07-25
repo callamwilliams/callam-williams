@@ -31,7 +31,7 @@ get_header(); ?>
 	<? include( locate_template( '/project/project_content.php' ) ); ?>
 
 	<div class="post__link">
-		<a href="<?= $project_link ?>" class="btn btn--alt">
+		<a  class="btn btn--alt" href="<?= $project_link ?>" target="_blank"  rel="noopener">
 			View Project
 			<span class="icon-angle-double-right"></span>
 		</a>

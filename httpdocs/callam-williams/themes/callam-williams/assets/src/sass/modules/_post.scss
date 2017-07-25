@@ -165,6 +165,21 @@
 		}
 	}
 
+	&__highlights {
+		span {
+			&::after {
+				content: '•';
+				padding-left: 5px;
+			}
+
+			&:last-child {
+				&::after {
+					content: '';
+				}
+			}
+		}
+	}
+
 	&__link {
 		display: flex;
 		align-items: center;

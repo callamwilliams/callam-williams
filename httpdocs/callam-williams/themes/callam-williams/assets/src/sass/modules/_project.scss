@@ -140,7 +140,6 @@
 			}
 		}
 
-
 		.project__image {
 			@include aspect-ratio(400, 400);
 			position: relative;
@@ -231,6 +230,19 @@
 		@include font-size(14px, 22px);
 		margin-bottom: 20px;
 		padding: 0 20px 0 0;
+
+		span {
+			&::after {
+				content: '/';
+				padding-left: 5px;
+			}
+
+			&:last-child {
+				&::after {
+					content: '';
+				}
+			}
+		}
 
 	}
 

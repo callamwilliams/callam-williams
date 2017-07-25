@@ -11,9 +11,21 @@
 	color: $brand-primary;
 	font-weight: bold;
 	text-transform: uppercase;
+	transition: all 0.1s ease-in;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $brand-secondary;
+		color: $brand-tertiary;
+	}
 
 	&--alt {
 		background-color: $brand-secondary;
 		color: $brand-tertiary;
+
+		&:hover {
+			background-color: $brand-tertiary;
+			color: $brand-primary;
+		}
 	}
 }

@@ -9,7 +9,7 @@ $project_link = get_field( 'project_link' );
 		<h2 class="post__subtitle"><?= $project_type ?></h2>
 	</div>
 
-	<a href="<?= $project_link ?>" class="btn">
+	<a class="btn" href="<?= $project_link; ?>" target="_blank" rel="noopener">
 		View Project
 		<span class="icon-angle-double-right"></span>
 	</a>
