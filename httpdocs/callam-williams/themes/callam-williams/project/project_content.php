@@ -28,6 +28,9 @@
 				<? endif; ?>
 
 				<div class="post__text <?= ( ( $count % 2 ) == 1 ) ? '' : 'post__text--right' ?>">
+					<? if ( $i > 4 ) {
+						$i = 1;
+					} ?>
 					<? include get_template_directory() . '/assets/svg/pattern' . $i . '.svg' ?>
 					<?= $text ?>
 				</div>

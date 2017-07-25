@@ -11,7 +11,7 @@ add_theme_support( 'automatic-feed-links' );
 function image_sizes() {
 	add_image_size( 'banner', 1840 );
 	add_image_size( 'background', 1540 );
-	add_image_size( 'card', 505 );
+	add_image_size( 'card', 620 );
 
 }
 
