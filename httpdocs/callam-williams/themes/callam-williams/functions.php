@@ -56,7 +56,7 @@ include 'functions/setup/acf.php';
  * @desc Adds functions which relate to wp-admin area
  */
 
-include 'functions/admin/login.php';
+//include 'functions/admin/login.php';
 
 /**
  * @desc Adding registering of custom post types
