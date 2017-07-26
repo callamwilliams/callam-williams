@@ -85,6 +85,16 @@
 			<span class="icon-github"></span>
 			<span class="icon-stack-overflow"></span>
 			<span class="icon-twitter"></span>
+
+			<a href="//www.github.com/callamwilliams" target="_blank" rel="noopener">
+				<span class="icon-github"></span>
+			</a>
+			<a href="https://stackoverflow.com/users/822671/callam" target="_blank" rel="noopener">
+				<span class="icon-stack-overflow"></span>
+			</a>
+			<a href="//www.twitter.com/callamwilliams" target="_blank" rel="noopener">
+				<span class="icon-twitter"></span>
+			</a>
 		</div>
 	</div>
 </header>
