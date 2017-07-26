@@ -5,6 +5,10 @@
 	margin: 0 10px;
 	list-style: none;
 
+	@include mq($small){
+		margin: 0;
+	}
+
 	&__item {
 		margin: 0 20px;
 		padding: 0 10px;

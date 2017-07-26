@@ -69,7 +69,7 @@
 
 <header class="header">
 	<div class="header__content">
-		<h1 class="header__title small-hide">
+		<h1 class="header__title">
 			<a href="/">
 				<span>Callam</span> Williams
 			</a>
