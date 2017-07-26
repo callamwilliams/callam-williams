@@ -12,9 +12,6 @@
 ?>
 
 </main>
-</div>
-</section>
-
 
 <footer id="footer" class="footer">
 	<div class="footer__links">

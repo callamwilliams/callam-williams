@@ -13,7 +13,7 @@
 		top: -25px;
 		text-transform: uppercase;
 
-		@include mq($small){
+		@include mq($small) {
 			@include font-size(35px, 50px);
 		}
 	}
@@ -37,6 +37,10 @@
 			right: 10%;
 			bottom: 11%;
 			left: initial;
+
+			@include mq($small) {
+				display: none;
+			}
 		}
 	}
 }
