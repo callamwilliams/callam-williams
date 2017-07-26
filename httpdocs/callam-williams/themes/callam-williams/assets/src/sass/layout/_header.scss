@@ -26,6 +26,11 @@
 	&__navigation {
 		display: flex;
 
+		@include mq($small) {
+			justify-content: space-around;
+			width: 100%;
+		}
+
 		span {
 			margin: 5px 10px 0;
 			padding: 0 5px;
