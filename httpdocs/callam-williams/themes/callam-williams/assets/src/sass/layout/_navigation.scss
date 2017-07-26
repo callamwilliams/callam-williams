@@ -8,6 +8,10 @@
 	&__item {
 		margin: 0 20px;
 		padding: 0 10px;
+
+		@include mq($small){
+			margin: 0;
+		}
 	}
 
 }
