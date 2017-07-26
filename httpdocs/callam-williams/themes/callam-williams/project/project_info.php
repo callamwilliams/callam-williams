@@ -10,7 +10,7 @@ $project_link = get_field( 'project_link' );
 	</div>
 
 	<a class="btn" href="<?= $project_link; ?>" target="_blank" rel="noopener">
-		View Project
+		Visit Site
 		<span class="icon-angle-double-right"></span>
 	</a>
 </div>
