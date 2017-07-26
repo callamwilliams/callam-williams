@@ -30,7 +30,7 @@ $loop = new WP_Query( $args ); ?>
 				<a class="project__content" href="<?= get_post_permalink( $loop->ID ); ?>">
 					<div class="project__text">
 						<header class="project__header">
-							<h1 class="project__title"><?= $loop->post_title; ?></h1>
+							<h1 class="project__title"><?= the_title( $loop->ID); ?></h1>
 							<h2 class="project__type"><?= $type ?></h2>
 						</header>
 					</div>
