@@ -82,10 +82,7 @@
 			   onmouseover="this.href=this.href.replace('@@','.')">
 				Contact
 			</a>
-			<span class="icon-github"></span>
-			<span class="icon-stack-overflow"></span>
-			<span class="icon-twitter"></span>
-
+			
 			<a href="//www.github.com/callamwilliams" target="_blank" rel="noopener">
 				<span class="icon-github"></span>
 			</a>
