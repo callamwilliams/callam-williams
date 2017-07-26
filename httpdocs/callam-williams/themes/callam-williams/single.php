@@ -32,7 +32,7 @@ get_header(); ?>
 
 	<div class="post__link">
 		<a  class="btn btn--alt" href="<?= $project_link ?>" target="_blank"  rel="noopener">
-			View Project
+			Visit Site
 			<span class="icon-angle-double-right"></span>
 		</a>
 	</div>
