@@ -7,7 +7,7 @@
 
 //  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
 
-function create_prop_taxonomies() {
+function create_taxonomies() {
 
 
 	register_taxonomy(
@@ -26,4 +26,4 @@ function create_prop_taxonomies() {
 	flush_rewrite_rules();
 }
 
-add_action( 'init', 'create_prop_taxonomies' );
+add_action( 'init', 'create_taxonomies' );

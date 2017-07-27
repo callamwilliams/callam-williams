@@ -1,4 +1,3 @@
-import Flickity from 'flickity';
 import 'lazysizes';
 import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
 import Init from './classes/Init';
@@ -6,20 +5,6 @@ import Parallax from './classes/Parallax';
 import Util from './classes/Util';
 
 const pageFunctions = {
-	sliders__ready() {
-		const sliders = document.querySelectorAll('.js-slider');
-
-		for (let i = 0; i < sliders.length; i++) {
-			const slider = sliders[i];
-			flkty = new Flickity(slider, {
-				prevNextButtons: false,
-				wrapAround: true,
-				pageDots: false,
-				autoPlay: 5000,
-				pauseAutoPlayOnHover: true,
-			});
-		}
-	},
 	YT__ready() {
 		const container = 'player';
 		const videoSelector = document.getElementById('js-video');

@@ -9,7 +9,7 @@
  * @desc We will automatically set the permalink structure
  */
 
-function prop_update_permalinks() {
+function update_permalinks() {
 
 	if ( get_option( 'permalink_structure' ) == '' ) {
 		global $wp_rewrite;
@@ -19,7 +19,7 @@ function prop_update_permalinks() {
 
 }
 
-add_action( 'after_switch_theme', 'prop_update_permalinks' );
+add_action( 'after_switch_theme', 'update_permalinks' );
 
 function my_theme_add_editor_styles() {
 	add_editor_style( get_template_directory_uri() . '/assets/src/css/tinymce.css' );

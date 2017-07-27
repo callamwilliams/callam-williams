@@ -7,7 +7,7 @@
 
 //  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
 
-function create_prop_post_types() {
+function create_post_types() {
 
 	register_post_type( 'project',
 
@@ -60,5 +60,5 @@ function create_prop_post_types() {
 
 }
 
-add_action( 'init', 'create_prop_post_types' );
+add_action( 'init', 'create_post_types' );
 
