@@ -34,7 +34,7 @@
 	<meta name="theme-color" content="#544D6B">
 	<base href="<?= home_url(); ?>">
 
-	<? $analytics = explode( "\n", 'UA-XXXXX-X' ); ?>
+	<? $analytics = explode( "\n", 'UA-103445788-1' ); ?>
 
 	<script>
 		// Google Analytics
