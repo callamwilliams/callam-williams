@@ -43,6 +43,7 @@
 		@include mq($small) {
 			justify-content: space-around;
 			width: 100%;
+			min-height: 20px;
 			margin: 0 0 20px;
 			text-align: center;
 		}
