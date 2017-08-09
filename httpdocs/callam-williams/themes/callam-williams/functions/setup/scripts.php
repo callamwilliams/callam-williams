@@ -13,7 +13,7 @@ function footer() {
 		wp_deregister_script( 'jquery' );
 	}
 	wp_deregister_script( 'wp-embed' );
-	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/scripts.min.js#defer', false, filemtime( get_template_directory() . '/assets/scripts.min.js' ), true );
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/scripts.min.js', false, filemtime( get_template_directory() . '/assets/scripts.min.js' ), true );
 	wp_enqueue_script( 'main-js' );
 
 }
@@ -23,18 +23,15 @@ add_action( 'wp_enqueue_scripts', 'footer' );
 
 
 /**
- * @desc if you add #defer or #async at the end of a script source it will add that attribute to the script tag automatically
+ * @desc add defer to scripts.min.js
  */
 
-function script_attributes( $url ) {
-
-	if ( strpos( $url, '#' ) === false ) {
-		return $url;
-	} else {
-		$hash = explode( "#", $url )[1];
-
-		return str_replace( '#' . $hash, '', $url ) . "' $hash";
+function add_defer_attribute( $tag, $handle ) {
+	if ( 'main-js' !== $handle ) {
+		return $tag;
 	}
+
+	return str_replace( ' src', ' defer src', $tag );
 }
 
-add_filter( 'clean_url', 'script_attributes', 11, 1 );
+add_filter( 'script_loader_tag', 'add_defer_attribute', 10, 2 );
