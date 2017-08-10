@@ -41,12 +41,3 @@ function pagination_bar( $loop ) {
 		] );
 	}
 }
-
-/**
- * @desc make lowercase and strip whitespace for dynamic classnames
- */
-
-function sanitizeClassName($string) {
-	return strtolower(str_replace(' ', '', $string));
-}
-
