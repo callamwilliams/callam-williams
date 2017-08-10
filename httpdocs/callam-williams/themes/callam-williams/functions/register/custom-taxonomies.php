@@ -21,9 +21,6 @@ function create_taxonomies() {
 		)
 	);
 
-	//  Add the next taxonomy here  //
-
-	flush_rewrite_rules();
 }
 
 add_action( 'init', 'create_taxonomies' );

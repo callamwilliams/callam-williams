@@ -34,29 +34,6 @@ add_action( 'admin_head', 'RemoveAddMediaButton' );
 add_filter( 'show_admin_bar', '__return_false' );
 
 /**
- * @desc Stop core updates for non admins, Disable upgrade now messages for non admins
- */
-
-if ( current_user_can( 'manage_options' ) != true ) {
-
-	function remove_core_updates() {
-		global $wp_version;
-
-		return (object) array(
-			'last_checked' => time(),
-			'version_checked' => $wp_version,
-		);
-	}
-
-	add_filter( 'pre_site_transient_update_core', 'remove_core_updates' );
-	add_filter( 'pre_site_transient_update_plugins', 'remove_core_updates' );
-	add_filter( 'pre_site_transient_update_themes', 'remove_core_updates' );
-	add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
-	add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
-
-}
-
-/**
  * @desc Remove version info from head and feeds for added security
  */
 

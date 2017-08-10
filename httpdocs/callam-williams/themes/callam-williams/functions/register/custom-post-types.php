@@ -53,11 +53,6 @@ function create_post_types() {
 		)
 	);
 
-
-	//  Register any additional CPTs here  //
-
-	flush_rewrite_rules();
-
 }
 
 add_action( 'init', 'create_post_types' );
