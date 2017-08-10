@@ -20,18 +20,18 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="cleartype" content="on"/>
 	<meta name="msapplication-tap-highlight" content="no">
-	<link rel="dns-prefetch" href="//<?= home_url(); ?>">
-	<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-	<link rel="dns-prefetch" href="//js-agent.newrelic.com">
-	<link rel="dns-prefetch" href="//use.typekit.net">
-	<link rel="dns-prefetch" href="https://www.google-analytics.com">
-	<link rel="profile" href="http://gmpg.org/xfn/11"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="revisit-after" content="14 days">
 	<meta name="robots" content="all">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 	<meta name="url" content="<?= home_url(); ?>">
 	<meta name="theme-color" content="#544D6B">
+	<link rel="dns-prefetch" href="//<?= home_url(); ?>">
+	<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+	<link rel="dns-prefetch" href="//js-agent.newrelic.com">
+	<link rel="dns-prefetch" href="//use.typekit.net">
+	<link rel="dns-prefetch" href="https://www.google-analytics.com">
+	<link rel="profile" href="http://gmpg.org/xfn/11"/>
 	<base href="<?= home_url(); ?>">
 
 	<? $analytics = explode( "\n", 'UA-103445788-1' ); ?>
